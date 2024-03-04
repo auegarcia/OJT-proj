@@ -12,16 +12,16 @@ $query = "SELECT * from users WHERE username='$username'";
 $results = mysqli_query($con, $query); 
 $exists = mysqli_num_rows($results); 
 
-$table_users = "";
+$table_usersname = "";
 $table_password = "";
 if($results != "") 
 {
     while($row = mysqli_fetch_assoc($results)) 
     {
-        $table_users = $row['username']; 
+        $table_username = $row['username']; 
         $table_password = $row['password']; 
     }
-    if(($email == $table_users) && ($password == $table_password)) 
+    if(($email == $table_username) && ($password == $table_password)) 
     {
         if($password == $table_password)
         {
