@@ -12,7 +12,7 @@ $con = mysqli_connect("localhost",'root','','users');
 //LOCAL
 //$conn = mysqli_connect("localhost","root","","caremate");
 
-if (!$conn) {
+if (!$con) {
     die("Connection Failed :-".mysqli_connect_error());
 }
 ?>

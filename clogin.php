@@ -18,7 +18,7 @@ if($results != "")
         $table_username = $row['username']; 
         $table_password = $row['password']; 
     }
-    if(($email == $table_username) && ($password == $table_password)) 
+    if(($username == $table_username) && ($password == $table_password)) 
     {
         if($password == $table_password)
         {

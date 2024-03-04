@@ -1,14 +1,6 @@
 <?php
-$host="localhost";
-$user="root";
-$password="";
-$db="users"; 
+include ('dbcon.php');
 
-$data=mysqli_connect($host,$user,$password,$db);
-if($data===false)
-{
-	die("connection error");
-}
 
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
@@ -41,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 				<form action="clogin.php" method="POST">
 					<div class="form-group">
 					<label for=""> Username</label>
-					<input type="username" id="username" class="form-control" name="username" required/>
+					<input type="text" id="username" class="form-control" name="username" required/>
 					</div>
 					<div class="form-group">
 					<label for=""> Password</label>
